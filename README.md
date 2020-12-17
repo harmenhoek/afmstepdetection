@@ -2,7 +2,7 @@ afmstepdetection
 
 Harmen Hoek <br />
 December 2020 <br />
-Latest release: 17-12-2020<br />
+Latest release: 17-12-2020 (V1)<br />
 Created for: Physics of Complex Fluids, University of Twente.
 
 
@@ -53,6 +53,9 @@ Main program interface with settings:<br />
 
 The 2 figures that are created: <br />
 <img src="images/afmstepdetector_v1_3.png" width="400" /><img src="images/afmstepdetector_v1_4.png" width="400" />
+
+The output csv: <br />
+<img src="images/afmstepdetector_v1_5.png" width="400" />
 
 ## Further Development
 The current release is quick and dirty. Many things to improve. Including:

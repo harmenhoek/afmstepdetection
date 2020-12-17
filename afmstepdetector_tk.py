@@ -47,11 +47,7 @@ R_arrow_out = 10  # how far the arrow starts beyond r_end
 
 
 
-# Initialize settings
-if custom_theta:
-    theta_range = theta_set
-else:
-    theta_range = np.arange(0, 360, 360/theta_steps)
+
 
 # Functions
 def data_import(filename):
@@ -522,6 +518,13 @@ def run():
     print('residuals_threshold: ', residuals_threshold, f"({type(residuals_threshold)})")
     # print('r_start: ', r_start, f"({type(r_start)})")
     # exit()
+
+    # Initialize settings
+    global theta_range
+    if custom_theta:
+        theta_range = np.array(theta_set)
+    else:
+        theta_range = np.arange(0, 360, 360 / theta_steps)
 
     # run code as usual
     run_afmstepdetector()
