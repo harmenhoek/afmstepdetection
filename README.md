@@ -1,19 +1,10 @@
 afmstepdetection
 
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-    </li>
-    <li><a href="#documentation">Documentation</a></li>
-    <li><a href="#further-development">Further Development</a></li>
+Harmen Hoek <br />
+December 2020 <br />
+Latest release: 17-12-2020<br />
+Created for: Physics of Complex Fluids, University of Twente.
 
-  </ol>
-</details>
 
 ## About
 This is a program for analyzing circular steps `.spm` files originating from the AFM. The steps are circular plateaus. 
@@ -30,6 +21,13 @@ The entire program is compiled into a Windows executable `.exe`.
 ## Getting Started
 Download the `dist/*.exe` file. In the same folder add the `data\*.spm` data file and run the program.
 
+When the program is running:
+1. Check the settings (see Settings below).
+2. Press `RUN`.
+3. Select 3 points on the edge of the step. After selecting 3 a circle will be fitted. Ad more points to refine the circle fit, or press `ENTER` to continue.
+4. The program will produce 2 figures. Figure 1 (named Figure 2) will visually show the steps and the fitting region. Figure 2 (named Figure 3) will show the step crosssections, where each step is normalized by setting the lower fit at 0.
+5. The program will create a `.csv` and `.json` file will all the extracted data and settings in the same folder as the program. Please note that it does overwrite any previously saved `.csv` files if the name is not unique.
+
 ### Settings
 | Setting        | Description
 | --------------- |:-------------|
@@ -45,16 +43,16 @@ Download the `dist/*.exe` file. In the same folder add the `data\*.spm` data fil
 | Fit offset | Each step line is fitted at high and low end. Fit offset defines distance from R (in data points / pixels) where fitting will start. So each step is fitted from `r_start*R to R-fit_offset` and `R+fit_offset to r_end*R`.
 | Residual threshold | Some basic filtering is done on the fits. If the res. is above the set threshold, the entire step is ignored in plotting and data output. 
 
-IMAGE HERE
-
-
-
 ## Example
 
 Main program interface with settings:<br />
-<img src="images/afmstepdetector_v1_1.png" width="200" />
+<img src="images/afmstepdetector_v1_1.png" width="300" />
 
-## Documentation
+3 points are selected for a circle fit:<br />
+<img src="images/afmstepdetector_v1_2.png" width="400" />
+
+The 2 figures that are created: <br />
+<img src="images/afmstepdetector_v1_3.png" width="400" /><img src="images/afmstepdetector_v1_4.png" width="400" />
 
 ## Further Development
 The current release is quick and dirty. Many things to improve. Including:
