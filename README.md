@@ -51,8 +51,8 @@ IMAGE HERE
 
 ## Example
 
-
-![](images/afmstepdetector_v1_1.png =250x "AFM step detector interface")
+Main program interface with settings:<br />
+<img src="images/afmstepdetector_v1_1.png" width="200" />
 
 ## Documentation
 
