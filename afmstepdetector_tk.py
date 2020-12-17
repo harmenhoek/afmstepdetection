@@ -290,7 +290,7 @@ import numpy as np
 
 
 root = tkinter.Tk()
-root.title("Embedding in Tk")
+root.title("AFM step detector V1")
 # root.iconbitmap('favicon.ico')
 
 # # general canvas with grid
@@ -534,7 +534,11 @@ frame_right = Frame(root, width=400)
 frame_right.grid(row=1, column=1, columnspan=1, sticky='nwe')
 
 r = 0
-tk.Label(frame_right, text="AFM Step Detector V1", font=('Arial', 14)).grid(row=r, column=0, columnspan=3, pady=10)
+tk.Label(frame_right, text="AFM Step Detector V1", font=('Arial', 14)).grid(row=r, column=0, columnspan=3, pady=(5,2))
+r += 1
+tk.Label(frame_right, text="Release: 17-12-2020 (Harmen Hoek)", font=('Arial', 10)).grid(row=r, column=0, columnspan=3, pady=2)
+r += 1
+tk.Label(frame_right, text="github.com/harmenhoek/afmstepdetection", font=('Arial', 8)).grid(row=r, column=0, columnspan=3, pady=2)
 r += 1
 tk.Label(frame_right, text='Settings', font=('Arial', 12)).grid(row=r, column=0, padx=2, pady=5, sticky='w')
 
@@ -618,7 +622,7 @@ l_resthreshold2 = tk.Label(frame_right, text='(above discarded)').grid(row=r, co
 r += 1
 b_run = Button(frame_right, text='RUN', padx=20, pady=10, command=run).grid(row=r, column=0, columnspan=3, pady=10)
 r += 1
-b_quit = tkinter.Button(master=root, text="Quit", command=_quit).grid(row=r, column=0, columnspan=3)
+b_quit = tkinter.Button(master=root, text="Quit", command=_quit).grid(row=r, column=0, columnspan=3, pady=(0,10))
 
 
 
